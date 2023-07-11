@@ -1,8 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const dogRoutes = require("./routes/dogRoutes");
-const breedRoutes = require("./routes/breedRoutes");
+
 const app = express();
 
 const DB_URL = process.env.DB_URL;
@@ -21,8 +20,6 @@ mongoose
 
 app.use(express.json());
 // Routes
-app.use("/api/dogs", dogRoutes);
-app.use("/api/breeds", breedRoutes);
 
 const productRoutes = require("./routes/productRoutes");
 app.use("/api", productRoutes);
