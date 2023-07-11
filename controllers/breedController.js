@@ -44,7 +44,7 @@ class BreedList {
   }
 
   async post(req, res) {
-    console.log(req.body);
+    // console.log(req.body);
     try {
       const breed = await Breed.create(req.body);
       res.json(breed);

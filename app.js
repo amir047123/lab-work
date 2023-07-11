@@ -23,6 +23,10 @@ app.use(express.json());
 // Routes
 app.use("/api/dogs", dogRoutes);
 app.use("/api/breeds", breedRoutes);
+
+const productRoutes = require("./routes/productRoutes");
+app.use("/api", productRoutes);
+
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
